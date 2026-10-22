@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Scroll Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="title">CSS Scroll Bar</h1>
+
+    <main class="container">
+
+        <section class="panel description">
+            <h2>CSS Scrollbar Selectors</h2>
+
+            <p>
+                Chrome, Edge, Safari и Opera поддерживают
+                нестандартный ::-webkit-scrollbar,
+                который позволяет изменять внешний вид
+                полосы прокрутки браузера.
+            </p>
+
+            <p>
+                Вы можете использовать следующие
+                псевдоэлементы для настройки прокрутки:
+            </p>
+
+            <p>✅ ::-webkit-scrollbar — вся полоса прокрутки.</p>
+            <p>✅ ::-webkit-scrollbar-thumb — перетаскиваемый маркер.</p>
+            <p>✅ ::-webkit-scrollbar-track — дорожка прокрутки.</p>
+            <p>✅ ::-webkit-scrollbar-button — кнопки прокрутки.</p>
+            <p>✅ ::-webkit-scrollbar-track-piece — часть дорожки.</p>
+            <p>✅ ::-webkit-scrollbar-corner — угол между полосами.</p>
+
+            <h3>Зачем это нужно?</h3>
+            <p>
+                Кастомная полоса прокрутки помогает сделать
+                сайт более стильным и индивидуальным.
+            </p>
+
+            <h3>Пример использования</h3>
+            <p>
+                Вы можете менять цвет, ширину и форму
+                полосы прокрутки с помощью CSS.
+            </p>
+        </section>
+
+        <section class="panel code-panel">
+            <h3>Code:</h3>
+
+            <pre><code id="cssCode">body {
+    --sb-track-color: #222;
+    --sb-thumb-color: #ea7711;
+    --sb-size: 1rem;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1rem;
+}
+
+body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+    scrollbar-width: thin;
+}</code></pre>
+
+            <button id="copyButton">COPY CODE</button>
+            <p id="message"></p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
